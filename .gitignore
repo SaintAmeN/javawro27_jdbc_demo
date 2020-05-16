@@ -1,0 +1,10 @@
+# 1. dodaję do gitignore ale:
+#       -- pusty (parametry są, ale bez wartości)
+# 2. drugi commit, dopisania linia poniżej, żeby
+#       dowolne zmiany które zachodzą później
+#       (m.in. dopisanie wartości) nie były zapisane
+#       na git (wyciek hasełek)
+.idea/
+target/
+*.iml
+/src/main/resources/jdbc.properties
