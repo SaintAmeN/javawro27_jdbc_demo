@@ -12,3 +12,4 @@ create table if not exists `students` (
 
 -- insert into `students` (`first_name`, `last_name`, `height`, `age`, `alive`) values ( ?, ?, ?, ?, ?);
 -- select * from `students`;
+-- update `students` set `first_name`= ?, `last_name` = ?, `height` = ?, `age`= ?, `alive`= ? where `id` = ?; 

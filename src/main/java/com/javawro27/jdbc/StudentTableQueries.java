@@ -18,5 +18,14 @@ public interface StudentTableQueries {
 
     String SELECT_ALL_STUDENTS_QUERY =
             "select * from `students`;";
+    String UPDATE_STUDENT_QUERY = "update `students` set " +
+            "`first_name`= ?, " +
+            "`last_name` = ?, " +
+            "`height` = ?, " +
+            "`age`= ?, " +
+            "`alive`= ? " +
+            "where `id` = ?;";
+
+    String DELETE_STUDENT_QUERY = "delete from `students` where `id` = ?;";
 }
 
