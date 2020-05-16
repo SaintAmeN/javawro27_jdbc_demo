@@ -1,10 +1,8 @@
-# 1. dodaję do gitignore ale:
-#       -- pusty (parametry są, ale bez wartości)
-# 2. drugi commit, dopisania linia poniżej, żeby
-#       dowolne zmiany które zachodzą później
-#       (m.in. dopisanie wartości) nie były zapisane
-#       na git (wyciek hasełek)
+# 1. dodaję gitignore wraz z treścią poniżej
 .idea/
 target/
 *.iml
 /src/main/resources/jdbc.properties
+
+# 2. dopiero po pierwszym commicie dodajemy do projektu plik
+#           jdbc.properties i robimy commita.

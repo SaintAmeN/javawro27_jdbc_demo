@@ -35,7 +35,12 @@ public class StudentDao {
             // ile zostało edytowanych rekordów
             int affectedRecords = statement.executeUpdate();
 
-            // todo: trzeba jeszcze odebrać identyfikator wygenerowanego rekordu.
+            // identyfikatory wygenerowane:
+            ResultSet generatedKeys = statement.getGeneratedKeys();
+            if(generatedKeys.next()){ // jeśli jest rekord
+                Long generatedKey = generatedKeys.getLong(1);
+                student.setId(generatedKey);
+            }
 
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -52,8 +57,6 @@ public class StudentDao {
                 System.err.println("Błąd zamknięcia połączenia");
             }
         }
-
-
     }
 
     public List<Student> getAllStudents() {
