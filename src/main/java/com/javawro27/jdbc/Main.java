@@ -1,10 +1,23 @@
 package com.javawro27.jdbc;
 
+import com.javawro27.jdbc.model.Student;
+
 public class Main {
     public static void main(String[] args) {
-        MysqlConnectionParameters mcp = new MysqlConnectionParameters();
+        // trzeba mieć stworzoną bazę i tabelę
+        StudentDao dao = new StudentDao();
 
-        System.out.println("Login: " + mcp.getUsername());
-        System.out.println("Pass : " + mcp.getPassword());
+        Student student = Student.builder()
+                .firstName("Paweł")
+                .lastName("Gawel")
+                .alive(true)
+                .height(1.8)
+                .age(25)
+                .build();
+
+        // C - Create
+        dao.addToDatabase(student);
+
+
     }
 }

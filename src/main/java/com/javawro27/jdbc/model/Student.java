@@ -1,10 +1,12 @@
 package com.javawro27.jdbc.model;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class Student {
@@ -13,7 +15,7 @@ public class Student {
     private String firstName;
     private String lastName;
 
-    private double wzrost;
+    private double height;
     private int age;
 
     private boolean alive; // nie isAlive
