@@ -4,6 +4,7 @@ import com.javawro27.jdbc.model.Student;
 
 import java.util.List;
 import java.util.Scanner;
+import java.util.Vector;
 
 public class Main {
     public static void main(String[] args) {

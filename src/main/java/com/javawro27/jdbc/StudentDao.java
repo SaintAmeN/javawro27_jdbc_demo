@@ -13,6 +13,26 @@ public class StudentDao {
 
     public StudentDao() {
         this.mysqlConnection = new MysqlConnection();
+        createDatabaseAndTable();
+    }
+
+    private void createDatabaseAndTable() {
+        // Stwórz bazę / schema
+//        try (Connection connection = mysqlConnection.getConnection()) {
+//            try (PreparedStatement statement = connection.prepareStatement(StudentTableQueries.CREATE_DATABASE_QUERY)) {
+//                statement.execute();
+//            }
+//        } catch (SQLException throwables) {
+//            throwables.printStackTrace();
+//        }
+        // stwórz tabelę
+        try (Connection connection = mysqlConnection.getConnection()) {
+            try (PreparedStatement statement = connection.prepareStatement(StudentTableQueries.CREATE_TABLE_QUERY)) {
+                statement.execute();
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
     }
 
     public void addToDatabase(Student student) {

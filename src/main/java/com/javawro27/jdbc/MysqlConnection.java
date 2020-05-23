@@ -31,6 +31,7 @@ public class MysqlConnection {
             // Jeśli komputer i baza danych są w różnych strefach, to musi być uwzględniona różnica czasu przy dodawaniu rekordów.
             mysqlDataSource.setServerTimezone("Europe/Warsaw");
             mysqlDataSource.setUseSSL(false); // czy szyfrowanie (nie)
+            mysqlDataSource.setCreateDatabaseIfNotExist(true); // &createDatabaseIfNotExist
 
             mysqlDataSource.setAllowPublicKeyRetrieval(true);
         } catch (SQLException throwables) {
